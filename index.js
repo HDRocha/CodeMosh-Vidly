@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config(); //Executa a função que carrega as variáveis do arquivo .env
 require('express-async-errors');   //Esse é um módulo que possibilita não ter que colocar todas as chamadas de funções assincronas dentro de um try/catch. Esse opção substitui o middleware error.js que nós criamos com a mesma função.
 const error = require('../middleware/error'); //Só estamos utilizando esse módulo em uma das rotas (genres.js) mas o mais fácil é express-async-errors
 const winston = require('winston');
