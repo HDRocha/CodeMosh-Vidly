@@ -1,0 +1,1 @@
+Esse é um arquivo .txt comum.

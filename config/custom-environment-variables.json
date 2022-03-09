@@ -1,0 +1,6 @@
+{
+    "mail": {
+        "password": "vidly_password"
+    },
+    "jwtPrivatekey": "vidly_jwtPrivateKey"
+}
