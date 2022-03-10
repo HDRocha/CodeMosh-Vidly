@@ -1,4 +1,4 @@
-const asyncMiddleware = require("../middleware/async");
+//const asyncMiddleware = require("../middleware/async"); Essa opção foi desativada porque estamos utilizando express-async-erros
 const debug = require("debug")("app:genre");
 const express = require("express");
 const router = express.Router();
@@ -7,10 +7,11 @@ const { Genre, validate } = require("../Models/genre.js");
 const auth = require("../middleware/auth");
 
 //Get request
-router.get("/",  asyncMiddleware(async (req, res) => {   //Chamar essa função (asyncMiddleware) passando outra função é uma opção p/ não ter que utilizar o try/catch. Isso é um exemplo porém é mais fácil usar o npm module express-async-erros 
-    const genres = await Genre.find().sort("name");
-    res.send(genres);
-}));
+router.get("/", async (req, res) => {
+  //Chamar essa função (asyncMiddleware) passando outra função é uma opção p/ não ter que utilizar o try/catch. Isso é um exemplo porém é mais fácil usar o npm module express-async-erros
+  const genres = await Genre.find().sort("name");
+  res.send(genres);
+});
 
 router.get("/:id", async (req, res) => {
   if (!mongoose.Types.ObjectId.isValid(req.params.id))
