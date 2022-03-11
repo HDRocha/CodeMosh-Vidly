@@ -1,4 +1,5 @@
 const winston = require("winston");
+require("winston-mongodb");
 
 const logger = winston.createLogger({
   level: "info",
@@ -9,6 +10,14 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: "combined.log" }),
   ],
 });
+
+logger.add(
+  new winston.transports.MongoDB({
+    db: "mongodb://localhost:27017/vidly",
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+);
 
 module.exports = function (err, req, res, next) {
   //log the exceptions

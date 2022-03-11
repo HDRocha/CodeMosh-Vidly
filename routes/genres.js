@@ -8,7 +8,6 @@ const auth = require("../middleware/auth");
 
 //Get request
 router.get("/", async (req, res) => {
-  //Chamar essa função (asyncMiddleware) passando outra função é uma opção p/ não ter que utilizar o try/catch. Isso é um exemplo porém é mais fácil usar o npm module express-async-erros  
   const genres = await Genre.find().sort("name");
   res.send(genres);
 });
