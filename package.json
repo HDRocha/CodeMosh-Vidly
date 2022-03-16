@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watchAll --verbose", //Com essa flag --verbose receberemos informações extra para debugarmos os problemas.
     "prod": "cross-env NODE_ENV=production node index.js",
     "dev": "cross-env NODE_ENV=development nodemon index.js"
   },
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "jest": "^27.5.1"
   }
 }

@@ -35,8 +35,7 @@ const userSchema = mongoose.Schema({
 });
 
 //Adiciona um novo método ao schema do usuário assim o próprio objeto usuário poderá gerar seu jwt (jsonWebToken)
-userSchema.methods.generateAuthToken = function () {    
-    console.log(config.get('jwtPrivatekey')); 
+userSchema.methods.generateAuthToken = function () {        
     const token = jwt.sign({ _id: this._id }, config.get('jwtPrivatekey'));    
     return token;
 };

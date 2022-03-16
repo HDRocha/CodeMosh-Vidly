@@ -1,0 +1,34 @@
+-Popular Jest matcher functions: 
+// Equality 
+expect(...).toBe();
+expect(...).toEqual();
+
+// Truthiness
+expect(...).toBeDefined();
+expect(...).toBeNull();
+expect(...).toBeTruthy();
+expect(...).toBeFalsy();
+
+// Numbers
+expect(...).toBeGreaterThan();
+expect(...).toBeGreaterThanOrEqual();
+expect(...).toBeLessThan();
+expect(...).toBeLessThanOrEqual();
+
+// Strings
+expect(...).toMatch(/regularExp/);
+
+// Arrays
+expect(...).toContain();
+
+// Objects
+expect(...).toBe(); 
+
+// check for the equality of object references 
+expect(...).toEqual(); 
+
+// check for the equality of properties 
+expect(...).toMatchObject();
+
+// Exceptions
+expect(() => { someCode }).toThrow();
