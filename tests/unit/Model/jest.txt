@@ -6,6 +6,7 @@ expect(...).toEqual();
 // Truthiness
 expect(...).toBeDefined();
 expect(...).toBeNull();
+expect(...).not.toBeNull();
 expect(...).toBeTruthy();
 expect(...).toBeFalsy();
 
@@ -28,7 +29,8 @@ expect(...).toBe();
 expect(...).toEqual(); 
 
 // check for the equality of properties 
-expect(...).toMatchObject();
+expect(...).toMatchObject({ nameProperty: 'nameValue' });
+expect(...).toHaveProperty('nameProperty', 'nameValue');
 
 // Exceptions
 expect(() => { someCode }).toThrow();

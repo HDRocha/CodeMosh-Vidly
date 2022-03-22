@@ -1,38 +1,46 @@
 {
-  "name": "vidly",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest --watchAll --verbose", //Com essa flag --verbose receberemos informações extra para debugarmos os problemas.
-    "prod": "cross-env NODE_ENV=production node index.js",
-    "dev": "cross-env NODE_ENV=development nodemon index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bcrypt": "^5.0.1",
-    "config": "^3.3.6",
-    "debug": "^2.6.9",
-    "debuger": "^0.0.0",
-    "express": "^4.17.1",
-    "express-async-errors": "^3.1.1",
-    "express-body-parser-error-handler": "^1.0.4",
-    "helmet": "^4.6.0",
-    "joi": "^17.4.0",
-    "joi-objectid": "^4.0.2",
-    "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.21",
-    "mongoose": "^5.13.2",
-    "morgan": "^1.10.0",
-    "pug": "^3.0.2",
-    "winston": "^3.6.0",
-    "winston-mongodb": "^5.0.7"
-  },
-  "devDependencies": {
-    "cross-env": "^7.0.3",
-    "dotenv": "^16.0.0",
-    "jest": "^27.5.1"
-  }
+   "name": "vidly",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "test": "jest --watchAll --verbose --detectOpenHandles --coverage",
+      "prod": "cross-env NODE_ENV=production node index.js",
+      "dev": "cross-env NODE_ENV=development nodemon index.js",
+      "start": "node index.js"
+   },
+   "engines": {
+      "node": "16.14.0"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "bcrypt": "^5.0.1",
+      "compression": "^1.7.4",
+      "config": "^3.3.6",
+      "debug": "^2.6.9",
+      "debuger": "^0.0.0",
+      "express": "^4.17.1",
+      "express-async-errors": "^3.1.1",
+      "express-body-parser-error-handler": "^1.0.4",
+      "helmet": "^4.6.0",
+      "joi": "^17.4.0",
+      "joi-objectid": "^4.0.2",
+      "jsonwebtoken": "^8.5.1",
+      "lodash": "^4.17.21",
+      "moment": "^2.29.1",
+      "mongoose": "^5.13.2",
+      "morgan": "^1.10.0",
+      "pug": "^3.0.2",
+      "winston": "^3.6.0",
+      "winston-mongodb": "^5.0.7"
+   },
+   "devDependencies": {
+      "cross-env": "^7.0.3",
+      "dotenv": "^16.0.0",
+      "jest": "^27.5.1",
+      "prettier": "^2.6.0",
+      "supertest": "^6.2.2"
+   }
 }
